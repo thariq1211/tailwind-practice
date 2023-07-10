@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              adobe: ["Assistant"],
+            },
+            colors: {
+              based: "#007272",
+              inverse: "#f9f2d6",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      #toggle:checked ~ label div.toggle-circle {
+        @apply translate-x-3;
+        @apply bg-slate-500;
+      }
+    </style>
+
+    <title>Pseudo Classes and Dark Mode</title>
+  </head>
+  <body class="bg-inverse font-adobe dark:bg-based">
+    <h1
+      class="dark:text-slate-100 my-4 text-3xl font-semibold text-center bg-based bg-clip-text"
+    >
+      Pseudo Classes and Dark Mode
+    </h1>
+    <div class="flex justify-center">
+      <span>Light</span>
+      <input type="checkbox" id="toggle" class="hidden" />
+      <label for="toggle">
+        <div
+          class="w-9 h-5 bg-slate-800 rounded-full flex items-center p-1 cursor-pointer"
+        >
+          <div class="w-4 h-4 bg-slate-50 rounded-full toggle-circle"></div>
+        </div>
+      </label>
+      <span>Dark</span>
+    </div>
+
+    <button
+      class="block mx-auto my-4 bg-green-600 hover:bg-green-700 active:bg-green-800 active:ring-1 active:ring-green-300 px-3 py-1 rounded-xl text-white"
+    >
+      Button
+    </button>
+    <div
+      class="bg-slate-100 dark:bg-slate-700 dark:text-slate-50 hover:bg-based dark:hover:bg-slate-100 rounded-2xl mx-auto max-w-lg shadow-md p-3 group"
+    >
+      <h5
+        class="text-xl mb-3 font-semibold group-hover:text-slate-100 dark:group-hover:text-slate-800"
+      >
+        Ini Title Card
+      </h5>
+      <p
+        class="first-letter:text-6xl first-letter:float-left first-letter:mr-1 text-justify group-hover:text-slate-100 dark:group-hover:text-slate-800"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolor
+        voluptatibus, sed molestiae dolorum consequuntur omnis pariatur delectus
+        corrupti accusantium explicabo. Neque repellat dignissimos temporibus
+        voluptas maxime esse nostrum ipsa consequatur tenetur repudiandae
+        necessitatibus ullam porro iure, at est provident? Repudiandae quidem
+        expedita molestiae maiores animi eligendi, cupiditate, harum autem
+        quaerat quisquam ipsa perferendis vero optio reprehenderit ipsam nostrum
+        consequatur eveniet numquam voluptatum quae! Nam explicabo repellat esse
+        accusamus quis, eum voluptates natus rem atque.
+      </p>
+    </div>
+    <div class="rounded-2xl shadow-md p-3 mx-auto bg-slate-50 my-3 max-w-lg">
+      <form action="">
+        <label for="username" class="block">
+          <span class="m-1 after:content-['*'] after:text-pink-700 after:ml-0.5"
+            >Username</span
+          >
+          <input
+            type="text"
+            placeholder="your username..."
+            id="username"
+            name="username"
+            class="w-full placeholder:text-sm rounded-md border-based border px-2 py-1 focus:outline-none focus:ring-1 focus:ring-based"
+          />
+          <span class="text-sm text-cyan-900 m-1"
+            >input valid username for your account</span
+          >
+        </label>
+        <label for="email" class="block">
+          <span class="m-1">Email</span>
+          <input
+            placeholder="your email address"
+            type="email"
+            class="w-full placeholder:text-sm rounded-md border-based border px-2 py-1 focus:outline-none focus:ring-1 focus:ring-based peer focus:invalid:ring-pink-500 focus:invalid:border-pink-500"
+          />
+          <span class="text-sm m-1 invisible peer-invalid:visible text-pink-500"
+            >input valid email</span
+          >
+        </label>
+        <button
+          class="block mx-auto my-4 bg-based hover:bg-green-800 active:bg-green-900 active:ring-1 active:ring-green-950 px-3 py-1 rounded-xl text-white"
+        >
+          Button
+        </button>
+      </form>
+    </div>
+    <div class="mb-64"></div>
+    <script>
+      const checkbox = document.querySelector("#toggle");
+      const html = document.querySelector("html");
+      checkbox.addEventListener("click", function () {
+        checkbox.checked
+          ? html.classList.add("dark")
+          : html.classList.remove("dark");
+      });
+    </script>
+  </body>
+</html>
