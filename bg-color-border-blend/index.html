@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              adobe: ["Assistant"],
+            },
+            colors: {
+              based: "#007272",
+              inverse: "#f9f2d6",
+            },
+          },
+        },
+      };
+    </script>
+
+    <title>Background, Border, Blend</title>
+  </head>
+  <body class="bg-inverse">
+    <h1 class="mb-4 text-based font-semibold text-center text-3xl">
+      Background
+    </h1>
+    <div
+      class="border border-slate-500 bg-fixed w-[396px] h-[296px] bg-slate-600 mx-auto rounded overflow-y-scroll"
+      style="
+        background-image: url('https://source.unsplash.com/1000x600?nature');
+      "
+    >
+      <p class="p-1 text-inverse">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+        repellendus consequuntur ipsam corrupti autem voluptatem sit magnam
+        cumque laborum, nobis sunt mollitia assumenda nisi dolore, iure voluptas
+        a excepturi similique reprehenderit quasi laboriosam? Aliquam, soluta.
+        Voluptatem vitae aspernatur rerum optio eius sunt eveniet quisquam,
+        dignissimos excepturi pariatur molestias quas? Aspernatur, doloremque
+        ipsa? Quo eveniet dolor excepturi asperiores, deleniti, aperiam
+        exercitationem tenetur eum natus harum explicabo. Voluptatum quia
+        dolores qui soluta quas, alias veniam nobis ipsam illo doloribus,
+        distinctio et saepe blanditiis harum quis illum obcaecati tempora quos
+        amet aliquid! Mollitia cumque, perspiciatis consectetur soluta illum
+        odit, quod nemo inventore temporibus assumenda, praesentium vel maxime
+        tenetur! Modi ut sunt aspernatur at ducimus nihil voluptatibus animi
+        repellendus quas enim consectetur dolore accusantium delectus cumque
+        perferendis ad dignissimos recusandae tempora odio earum, blanditiis
+        doloremque. Repellendus, id perferendis magni laudantium fugit eveniet
+        reiciendis molestiae maiores neque iusto mollitia nisi iure error, odit
+        totam. Accusantium.
+      </p>
+    </div>
+    <div
+      class="flex mt-5 mx-auto max-w-[396px] h-[296px] bg-inverse rounded-lg bg-cover bg-blend-multiply"
+      style="background-image: url('./img/1.jpg')"
+    >
+      <div
+        class="overflow-y-hidden rounded-lg m-auto w-1/2 h-1/2 bg-gray-400 mix-blend-screen"
+      >
+        <p class="text-xs p-1 text-justify">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam itaque
+          fugit dignissimos vero aperiam omnis ipsum laborum ab unde,
+          repellendus, ipsa eum dolor! Consequuntur, quibusdam? Dolores
+          exercitationem id tenetur sed minima illum iste at harum eveniet optio
+          nulla consequatur fuga magni quidem, tempora odio impedit. Porro
+          mollitia aperiam maxime modi.
+        </p>
+      </div>
+    </div>
+    <div
+      class="flex mt-5 mx-auto max-w-[396px] h-[296px] bg-based rounded-md shadow-md shadow-[#c67d1f] bg-cover bg-blend-lighten"
+      style="background-image: url('./img/2.jpg')"
+    >
+      <div
+        class="flex m-auto h-[100px] w-[100px] bg-inverse rounded-full bg-white/10 backdrop-blur-sm"
+      >
+        <span class="m-auto text-4xl">A</span>
+      </div>
+    </div>
+    <div class="mb-[400px]"></div>
+  </body>
+</html>
