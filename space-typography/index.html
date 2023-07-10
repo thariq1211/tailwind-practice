@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              adobe: ["Assistant"],
+            },
+            colors: {
+              based: "#007272",
+              inverse: "#f9f2d6",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Tailwind CSS Learn</title>
+  </head>
+  <body class="bg-based">
+    <h1
+      class="text-center font-bold text-2xl bg-inverse bg-clip-text text-transparent my-6"
+    >
+      Belajar Tailwind CSS
+    </h1>
+    <section class="mb-5 bg-gradient-to-r from-orange-300 to-yellow-300">
+      <h2 class="mb-1 text-lg font-semibold">Space</h2>
+      <div class="m-16 border border-slate-600">Margin</div>
+      <div class="border border-slate-600 p-4">padding</div>
+    </section>
+    <section
+      class="font-adobe bg-gradient-to-bl from-orange-200 via-yellow-300 to-green-300"
+    >
+      <div class="max-w-md mx-auto">
+        <h2
+          class="mb-1 text-3xl font-semibold bg-based bg-clip-text text-transparent"
+        >
+          Typography
+        </h2>
+        <h1 class="text-2xl mb-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ea
+          quibusdam est ab ullam quidem!
+        </h1>
+        <header class="text-sm mb-4">
+          Ditulis oleh:
+          <a class="underline text-blue-300" href="#">M Thariq Nugroho</a>
+        </header>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel itaque
+          quasi facilis ratione enim veritatis cum laboriosam ab! Accusantium
+          alias reiciendis beatae aut inventore eius?
+        </p>
+        <blockquote class="text-center italic my-2">
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus,
+          repellendus?"
+        </blockquote>
+        <p class="text-justify">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore,
+          ab nobis dolore eum quae ea consectetur nisi? Ratione praesentium
+          debitis placeat corrupti reprehenderit ducimus nobis accusamus
+          voluptatum magnam pariatur. Quasi ipsam vel recusandae deleniti
+          accusantium quae odio autem, quod eligendi velit officiis quia
+          architecto itaque nemo temporibus ab beatae? Dolor veniam modi
+          corrupti fugiat quibusdam nobis consequatur aspernatur neque delectus
+          facilis exercitationem doloribus pariatur et laborum, consectetur
+          dignissimos qui! Ad neque harum, nisi nam dicta similique inventore
+          iste, veniam distinctio porro deserunt. Blanditiis libero commodi
+          ipsum placeat numquam dolores ad itaque voluptate vitae voluptas. Ad,
+          molestiae. Commodi voluptate nihil eveniet.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
